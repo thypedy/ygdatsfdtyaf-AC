@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+<ion-label position="floating">Peso do homem</ion-label>
+<ion-input [(ngModel)]="n1" type="number"></ion-input>
+</ion-item>
+
+<ion-button expand="block" (click)="somar()">calcular</ion-button>
+<ion-input [readonly]="true" value={{res1}}></ion-input>
+
+<ion-label position="floating">Peso da mulher</ion-label>
+<ion-input [(ngModel)]="n2" type="number"></ion-input>
+
+<ion-button expand="block" (click)="mulher()">calcular</ion-button>
+<ion-input [readonly]="true" value={{res}}></ion-input>
+
+
+<ion-list>
+  <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-list-header> Escolha uma opção: </ion-list-header>
+    <ion-item>
+      <ion-label>Pix</ion-label>
+      <ion-radio value="option1"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Debito</ion-label>
+      <ion-radio value="option2"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>crédito</ion-label>
+      <ion-radio value="option3"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+</ion-list>
+
+<ion-label position="floating">Valor</ion-label>
+<ion-input [(ngModel)]="n3" type="number"></ion-input>
+
+<ion-button expand="block" (click)="verificarRadio()" (click)="pagar()">calcular</ion-button>
+<ion-input [readonly]="true" value={{res2}}></ion-input>
+
+</ion-content>
